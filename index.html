@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="res/css/main.css">
+</head>
+<body onload="onLoad()">
+<div id="container">
+    <div class="center noselect" style="text-align: center">
+        <img src="res/assets/welcome.gif" height="94" width="340"/><br>
+        <div class="icon-tab">
+            <div class="icon">
+                <img src="res/assets/icons/cd-drive.png" height="48" width="48"/><br>
+                Projects
+            </div>
+            <div class="icon">
+                <img src="res/assets/icons/computer.png" height="48" width="48"/><br>
+                Twitter
+            </div>
+            <div class="icon">
+                <img src="res/assets/icons/msie.png" height="48" width="48"/><br>
+                Socials
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popups">
+    <div id="popup1" class="popup center">
+        <div class="popup-title noselect">
+            Something went wrong...
+            <button class="popup-title-x" onclick="closeWindow(1)">X</button>
+        </div>
+        <img class="popup-icon" src="res/assets/icons/warning.png" height="32" width="32"/>
+        <div class="popup-inner">
+            Your computer isn't compatible, with<br>
+            this version of Windows
+        </div>
+        <div class="popup-buttons">
+            <button class="popup-buttons-button" onclick="closeWindow(1)">Cancel</button>
+            <button class="popup-buttons-button-main" onclick="closeWindow(1)">OK</button>
+        </div>
+    </div>
+
+    <div id="popup2" class="popup center">
+        <div class="popup-title noselect">
+            Error Message
+            <button class="popup-title-x" onclick="closeWindow(2)">X</button>
+        </div>
+        <img class="popup-icon" src="res/assets/icons/error.png" height="32" width="32"/>
+        <div class="popup-inner">
+            Critical Error #32FFA00002:30<br>
+        </div>
+        <div class="popup-buttons">
+            <button class="popup-buttons-button-main" onclick="closeWindow(2)">OK</button>
+        </div>
+    </div>
+
+    <div id="popup3" class="popup center">
+        <div class="popup-title noselect">
+            Open
+            <button class="popup-title-x" onclick="closeWindow(3)">X</button>
+        </div>
+        <img class="popup-icon" src="res/assets/icons/warning.png" height="32" width="32"/>
+        <div class="popup-inner">
+            Can't find File or Folder "..\System32"<br>
+            Check your Hard-Drive.
+        </div>
+        <div class="popup-buttons">
+            <button class="popup-buttons-button" onclick="closeWindow(3)">Retry</button>
+            <button class="popup-buttons-button-main" onclick="closeWindow(3)">OK</button>
+        </div>
+    </div>
+</div>
+<div id="loading"></div>
+<div id="context-menu" class="noselect">
+    <div class="context-menu-text" id="a-github"><u>G</u>ithub</div>
+    <div class="context-menu-text" id="a-twitter"><u>T</u>witter</div>
+    <div class="context-menu-text" id="a-instagram"><u>I</u>nstagram</div>
+    <div class="context-menu-text" id="a-mail"><u>M</u>ail</div>
+    <div class="context-menu-line"></div>
+    <div class="context-menu-text"><u>D</u>evelopt by neostetic</div>
+</div>
+<script src="res/js/main.js"></script>
+</body>
+</html>
