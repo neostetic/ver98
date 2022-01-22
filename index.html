@@ -10,7 +10,7 @@
     <div class="center noselect" style="text-align: center">
         <img src="res/assets/welcome.gif" height="94" width="340"/><br>
         <div class="icon-tab">
-            <div class="icon">
+            <div class="icon" onclick="openWindow(4)">
                 <img src="res/assets/icons/cd-drive.png" height="48" width="48"/><br>
                 Projects
             </div>
@@ -26,7 +26,7 @@
     </div>
 </div>
 <div class="popups">
-    <div id="popup1" class="popup center">
+    <div id="popup1" class="popup center w420">
         <div class="popup-title noselect">
             Something went wrong...
             <button class="popup-title-x" onclick="closeWindow(1)">X</button>
@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <div id="popup2" class="popup center">
+    <div id="popup2" class="popup center w420">
         <div class="popup-title noselect">
             Error Message
             <button class="popup-title-x" onclick="closeWindow(2)">X</button>
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div id="popup3" class="popup center">
+    <div id="popup3" class="popup center w420">
         <div class="popup-title noselect">
             Open
             <button class="popup-title-x" onclick="closeWindow(3)">X</button>
@@ -71,6 +71,16 @@
             <button class="popup-buttons-button-main" onclick="closeWindow(3)">OK</button>
         </div>
     </div>
+
+    <div id="popup-projects" class="popup center">
+        <div class="popup-title noselect">
+            My Projects
+            <button class="popup-title-x" onclick="closeWindow(4)">X</button>
+        </div>
+        <div class="popup-text"><img src="res/assets/welcome.gif" height="94" width="340"/>
+        </div>
+    </div>
+
 </div>
 <div id="loading"></div>
 <div id="context-menu" class="noselect">

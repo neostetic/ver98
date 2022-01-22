@@ -3,6 +3,13 @@
     src: url(../assets/fonts/W95FA.otf);
 }
 
+:root {
+    --main-color: hsl(100, 0%, 80%); /* hsl(210, 23%, 60%); */
+    --border-first: hsl(252, 15%, 94%); /* hsl(211, 24%, 68%); */
+    --border-second: hsl(0, 0%, 28%); /* hsl(209, 20%, 26%); */
+    --background: #008080; /* #008080; */
+}
+
 * {
     box-sizing: border-box;
     font-family: W95FA, monospace;
@@ -13,7 +20,8 @@ body, html {
     padding: 0;
     margin: 0;
     height: 100%;
-    background: url("../assets/sky-pattern.jpeg");
+    background: var(--background);
+    background-size: cover;
     cursor: url("../assets/cusrors/Cursor79.cur"), default;
 }
 
@@ -23,7 +31,8 @@ body, html {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url("../assets/sky-pattern.jpeg");
+    background: var(--background);
+    background-size: cover;
     cursor: url("../assets/cusrors/Cursor83.cur"), default;
     z-index: 9;
 }
@@ -59,6 +68,7 @@ body, html {
     text-align: center;
     border: 1px solid transparent;
     cursor: url("../assets/cusrors/Cursor107.cur"), pointer;
+    color: white;
 }
 
 .icon:hover, .icon:focus {
@@ -79,21 +89,24 @@ body, html {
     left: Calc(50% - 20px);
 }
 
-#popup1, #popup2, #popup3 {
+#popup1, #popup2, #popup3, #popup-projects {
     display: none;
+}
+
+.w420 {
+    width: 420px;
 }
 
 .popup {
     float: left;
     margin: 5px;
-    border-top: 2px solid #edecf1;
-    border-left: 2px solid #edecf1;
-    border-bottom: 2px solid #474747;
-    border-right: 2px solid #474747;
-    background: #cbcbcb;
+    border-top: 2px solid var(--border-first);
+    border-left: 2px solid var(--border-first);
+    border-bottom: 2px solid var(--border-second);
+    border-right: 2px solid var(--border-second);
+    background: var(--main-color);
     box-shadow: 3px 3px 1px rgba(0,0,0,.4);
     padding: 2px;
-    width: 420px;
 }
 
 .popup-title {
@@ -114,23 +127,23 @@ body, html {
 .popup-title-x {
     float: right;
     margin-left: 20px;
-    border-top: 2px solid #edecf1;
-    border-left: 2px solid #edecf1;
-    border-bottom: 2px solid #474747;
-    border-right: 2px solid #474747;
-    background: #cbcbcb;
+    border-top: 2px solid var(--border-first);
+    border-left: 2px solid var(--border-first);
+    border-bottom: 2px solid var(--border-second);
+    border-right: 2px solid var(--border-second);
+    background: var(--main-color);
     font-weight: bold;
-    text-shadow: 1px 1px #edecf1;
+    text-shadow: 1px 1px var(--border-first);
     cursor: url("../assets/cusrors/Cursor107.cur"), pointer;
 }
 
 .popup-title-x:hover, .popup-buttons-button:hover, .popup-buttons-button-main:hover {
-    border-bottom: 2px solid #edecf1;
-    border-right: 2px solid #edecf1;
-    border-top: 2px solid #474747;
-    border-left: 2px solid #474747;
-    color: #edecf1;
-    text-shadow: 1px 1px #474747;
+    border-bottom: 2px solid var(--border-first);
+    border-right: 2px solid var(--border-first);
+    border-top: 2px solid var(--border-second);
+    border-left: 2px solid var(--border-second);
+    color: var(--border-first);
+    text-shadow: 1px 1px var(--border-second);
     outline: none;
 }
 
@@ -149,6 +162,16 @@ body, html {
     float: left;
 }
 
+.popup-text {
+    margin: 30px 1px 0 1px;
+    border-top: 2px solid var(--border-second);
+    border-left: 2px solid var(--border-second);
+    border-bottom: 2px solid var(--border-first);
+    border-right: 2px solid var(--border-first);
+    background: white;
+    padding: 4px 6px;
+}
+
 .popup-buttons {
     float: right;
     width: 100%;
@@ -165,21 +188,21 @@ body, html {
     float: right;
     margin-left: 5px;
     width: 70px;
-    border-top: 2px solid #edecf1;
-    border-left: 2px solid #edecf1;
-    border-bottom: 2px solid #474747;
-    border-right: 2px solid #474747;
-    background: #cbcbcb;
-    text-shadow: 1px 1px #edecf1;
+    border-top: 2px solid var(--border-first);
+    border-left: 2px solid var(--border-first);
+    border-bottom: 2px solid var(--border-second);
+    border-right: 2px solid var(--border-second);
+    background: var(--main-color);
+    text-shadow: 1px 1px var(--border-first);
     cursor: url("../assets/cusrors/Cursor107.cur"), pointer;
 }
 
 #context-menu {
-    border-top: 2px solid #edecf1;
-    border-left: 2px solid #edecf1;
-    border-bottom: 2px solid #474747;
-    border-right: 2px solid #474747;
-    background: #cbcbcb;
+    border-top: 2px solid var(--border-first);
+    border-left: 2px solid var(--border-first);
+    border-bottom: 2px solid var(--border-second);
+    border-right: 2px solid var(--border-second);
+    background: var(--main-color);
     width: 300px;
     position: relative;
     display: none;
@@ -199,9 +222,9 @@ body, html {
 }
 
 .context-menu-line {
-    border-top: 2px solid #474747;
-    border-left: 2px solid #474747;
-    border-bottom: 2px solid #edecf1;
-    border-left: 2px solid #edecf1;
+    border-top: 2px solid var(--border-second);
+    border-left: 2px solid var(--border-second);
+    border-bottom: 2px solid var(--border-first);
+    border-right: 2px solid var(--border-first);
     margin: 2px;
 }

@@ -1,3 +1,5 @@
+let zIndex = 8;
+
 function onLoad() {
     setTimeout(function () {
         document.getElementById("loading").style.display = "none";
@@ -53,21 +55,31 @@ function getMousePosition() {
 }
 
 function closeWindow(windowId) {
+    let popup;
     switch (windowId) {
-        case 1: document.getElementById("popup1").style.display = "none"; break;
-        case 2: document.getElementById("popup2").style.display = "none"; break;
-        case 3: document.getElementById("popup3").style.display = "none"; break;
+        case 1: popup = document.getElementById("popup1"); break;
+        case 2: popup = document.getElementById("popup2"); break;
+        case 3: popup = document.getElementById("popup3"); break;
+        case 4: popup = document.getElementById("popup-projects"); break;
         default: break;
     }
+    popup.style.display = "none";
+    popup.style.zIndex = zIndex + "";
+    zIndex++;
 }
 
 function openWindow(windowId) {
+    let popup;
     switch (windowId) {
-        case 1: document.getElementById("popup1").style.display = "table"; break;
-        case 2: document.getElementById("popup2").style.display = "table"; break;
-        case 3: document.getElementById("popup3").style.display = "table"; break;
-        default: break;
+        case 1: popup = document.getElementById("popup1"); break;
+        case 2: popup = document.getElementById("popup2"); break;
+        case 3: popup = document.getElementById("popup3"); break;
+        case 4: popup = document.getElementById("popup-projects"); break;
+        default: popup = document.getElementById(windowId); break;
     }
+    popup.style.display = "table";
+    popup.style.zIndex = zIndex + "";
+    zIndex++;
 }
 
 function openWindow1() {openWindow(1)}
